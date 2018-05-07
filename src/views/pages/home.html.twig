@@ -3,10 +3,7 @@
 {% block theme_class 'simpleapp' %}
 
 {% block header %}    
-    {% include 'FrontendBase::sections/menu.html.twig' with { 
-        'menu': menu,
-        'classList': 'header-menu'
-    }  %}
+    {% include 'FrontendBase::sections/header/header.html.twig' %}
 {% endblock %}
 
 {% block main %}
@@ -17,7 +14,6 @@
 
 {% block footer %}
     <div class="footer">
-        <p><strong>Footer</strong></p>
-        <p>Customized footer in a home page.</p>
+        <p><strong>Demo footer</strong></p>
     </div>
 {% endblock %}

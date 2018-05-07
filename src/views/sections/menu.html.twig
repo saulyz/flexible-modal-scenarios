@@ -1,9 +1,9 @@
 {% block menu %}
 
     {% if menu %}
-        <ul {% if classList is not empty %}class="{{ classList }}"{% endif %} >
+        <nav {% if classList is not empty %}class="{{ classList }}"{% endif %} >
         {% for menu_item in menu %}
-            <li><a href="{{ menu_item.link }}">{{ menu_item.title }}</a></li>
+            <a href="{{ menu_item.link }}">{{ menu_item.title }}</a>
         {% endfor %}
         </ul>
     {% endif %}
