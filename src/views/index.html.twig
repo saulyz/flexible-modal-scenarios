@@ -13,23 +13,27 @@
 <body class="{% block theme_class %}{% endblock %}">
     <div id="app">
 
-        <div class="header" id="header">
-            {% block header %}
-                {% block menu %}{% endblock %}
-            {% endblock %}
-        </div>
-        
-        <div class="content">
-            <div id="main">
-                {% block main %}{% endblock %}
-            </div>
-            <div id="aside">
-                {% block aside %}{% endblock %}
-            </div>
-        </div>
+        <div class="page-wrapper">
 
-        <div id="footer">
-            {% block footer %}{% endblock %}
+            <div class="header" id="header">
+                {% block header %}
+                {% block menu %}{% endblock %}
+                {% endblock %}
+            </div>
+            
+            <div class="content">
+                <div id="main">
+                    {% block main %}{% endblock %}
+                </div>
+                <div id="aside">
+                    {% block aside %}{% endblock %}
+                </div>
+            </div>
+            
+            <div class="footer" id="footer">
+                {% block footer %}{% endblock %}
+            </div>
+            
         </div>
 
     </div>

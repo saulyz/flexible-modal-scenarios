@@ -1,0 +1,23 @@
+{% extends 'FrontendBase::index.html.twig' %}
+
+{% block theme_class 'simpleapp' %}
+
+{% block header %}    
+    {% include 'FrontendBase::sections/menu.html.twig' with { 
+        'menu': menu,
+        'classList': 'header-menu'
+    }  %}
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        {{ myData }}
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <p><strong>Footer</strong></p>
+        <p>Customized footer in a home page.</p>
+    </div>
+{% endblock %}
