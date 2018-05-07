@@ -1,0 +1,35 @@
+{
+  "name": "twig-vue-clientside",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack --progress --colors --watch"
+  },
+  "author": "Saulius Vikerta",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "jquery-param": "^0.2.0",
+    "resolve-url-loader": "^2.3.0",
+    "vue": "^2.5.16"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^0.11.2",
+    "image-webpack-loader": "^3.6.0",
+    "imagemin-webpack-plugin": "^1.6.1",
+    "import-glob-loader": "^1.1.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7",
+    "vue-loader": "^13.7.1",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^3.11.0"
+  }
+}
