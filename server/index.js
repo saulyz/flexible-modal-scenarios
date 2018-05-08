@@ -3,7 +3,7 @@ const reload = require('reload');
 const twig = require('twig');
 
 const app = express();
-const port = 8000;
+const port = 8080;
 
 app.use(express.static(`${__dirname}/../src/dist`));
 app.set('views', `${__dirname}/../src/views`);

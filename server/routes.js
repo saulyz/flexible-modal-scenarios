@@ -8,6 +8,6 @@ module.exports = (app) => {
     };
 
     app.get('/', (req, res) => {
-        res.render('pages/home', globals);
+        res.render('pages/home/home', globals);
     });
 }
