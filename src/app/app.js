@@ -2,6 +2,9 @@ import Vue from 'vue';
 
 import './bootstrap';
 
-// Pages
 
 // Sections
+import 'Sections/overlay';
+
+// Pages
+import 'Pages/home/home';

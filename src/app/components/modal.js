@@ -42,7 +42,7 @@ export class Modal {
     }
 
     open() {
-        this.modalService.open(this);
+        modalService.open(this);
 
         return this.handler;
     }

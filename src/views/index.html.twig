@@ -36,6 +36,14 @@
             
         </div>
 
+        <div id="overlay">
+            <modal></modal>
+        </div>
+
+        {% block templates %}
+            {% include "FrontendBase::common/modal/modal.html.twig" %}
+        {% endblock %}
+
     </div>
 
     <script src="/reload/reload.js"></script>

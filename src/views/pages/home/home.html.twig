@@ -8,7 +8,10 @@
 
 {% block main %}
     <div class="main">
-        {{ myData }}
+        <div class="content page-home" id="page-home">
+            <p>{{ myData }}</p>
+            <p><span class="link" @click="openModal">click for modal</span></p>
+        </div>
     </div>
 {% endblock %}
 
