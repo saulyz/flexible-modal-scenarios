@@ -1,5 +1,10 @@
 <script type="x-template" id="modal-template">
-    <div class="modal" :class="classList">
-        this is modal
-    </div>
+    <transition :name="modal.transition" v-if="isOpen">
+        <div class="modal-wrapper" :class="[ modal.customClass ]">
+            <div class="modal-overlay" @click="close(false)"></div>
+            <div class="modal">
+                this is modal
+            </div>
+        </div>
+    </transition>
 </script>
