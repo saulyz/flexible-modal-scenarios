@@ -15,24 +15,24 @@
     align-items: stretch;
     justify-content: center;
 
-    @include medium-devices {
+    @include from($breakpoint-xs) {
         align-items: center;
     }
 
     &.modal-left-on-wide {
-        @include medium-devices {
+        @include from($breakpoint-xs) {
             justify-content: flex-start;
         }
     }
 
     &.modal-right-on-wide {
-        @include medium-devices {
+        @include from($breakpoint-xs) {
             justify-content: flex-end;
         }
     }
 
     &.modal-full-height {
-        @include medium-devices {
+        @include from($breakpoint-xs) {
             align-items: stretch;
         }
 
@@ -58,7 +58,7 @@
         height: 100%;
     }
 
-    @include medium-devices {
+    @include from($breakpoint-xs) {
         align-items: center;
         width: auto;
     }
@@ -84,7 +84,7 @@
         overflow-y: auto;
         background-color: white;
 
-        @include medium-devices {
+        @include from($breakpoint-xs) {
             padding: 40px;
             max-width: 640px;
         }
@@ -104,19 +104,16 @@
             @include until($breakpoint-xs) {
                 margin-top: 30px;
             }
-            @include medium-devices {
+            @include from($breakpoint-xs) {
                 font-size: 22px;
                 line-height: 28px;
                 margin-top: 10px;
-            }
-            @include large-devices {
-                top: -5px;
             }
         }
 
         .modal-body {
 
-            @include medium-devices {
+            @include from($breakpoint-xs) {
                 overflow-y: visible;
                 // this makes modal scrollable when modal is higher than screen
             }

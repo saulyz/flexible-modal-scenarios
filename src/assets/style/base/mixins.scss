@@ -23,6 +23,12 @@
     }
 }
 
+@mixin from ($breakpoint) {
+    @media screen and (min-width: $breakpoint) {
+        @content
+    }
+}
+
 @mixin extra-small-devices {
     @media screen and (max-width: $breakpoint-xs - 1px) {
         @content
@@ -42,7 +48,13 @@
 }
 
 @mixin large-devices {
-    @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
+    @media screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg - 1px) {
+        @content
+    }
+}
+
+@mixin extra-large-devices {
+    @media screen and (min-width: $breakpoint-lg) and (max-width: $breakpoint-xl - 1px) {
         @content
     }
 }
