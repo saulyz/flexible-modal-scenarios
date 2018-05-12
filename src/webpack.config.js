@@ -30,7 +30,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: extractCss.extract({
-                    use: ['css-loader?url=false', 'sass-loader', 'import-glob-loader']
+                    use: ['css-loader?url=false', 'postcss-loader', 'sass-loader', 'import-glob-loader']
                     // css-loader?url=false helps resolve background images urls
                     // https://github.com/webpack-contrib/css-loader/issues/256
                 })
