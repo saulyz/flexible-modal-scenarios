@@ -3,7 +3,7 @@
         <div class="modal-wrapper" :class="[ modal.customClass ]">
             <div class="modal-overlay" @click="close(false)"></div>
             <div class="modal">
-                this is modal
+                {% include "FrontendBase::common/modal/partials/modal-content-partial.html.twig" %}
             </div>
         </div>
     </transition>

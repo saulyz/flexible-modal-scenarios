@@ -1,5 +1,7 @@
 import eventBus from 'App/components/event-bus';
 
+import { faTimes } from '@fortawesome/fontawesome-free-solid';
+
 export default {
     template: '#modal-template',
     name: 'modal',
@@ -27,6 +29,12 @@ export default {
             
             this.modal = null;
             this.isOpen = false;
+        }
+    },
+
+    computed: {
+        title() {
+            return this.modal.title;
         }
     }
 }

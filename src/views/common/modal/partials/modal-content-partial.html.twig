@@ -1,0 +1,12 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h3 class="modal-header-title" v-text="title"></h3>
+        <button class="modal-close" @click="close(false)">
+            <font-awesome-icon class="icon-close" icon="times"></font-awesome-icon>
+        </button>
+    </div>
+    <div class="modal-body">
+        <component :is="modal.component" :on-close="close" v-bind="modal.parameters"></component>
+    </div>
+    <div class="modal-footer"></div>
+</div>

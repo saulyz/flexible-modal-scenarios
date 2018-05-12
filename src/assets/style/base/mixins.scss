@@ -6,6 +6,10 @@
     user-select: none;
 }
 
+@mixin text-color-transition {
+    transition: color 0.2s ease;
+}
+
 @mixin block-shadow-equal ($size: 20px, $opacity: 0.2) {
     $shadow-size: 20px;    // initial
     @if $size {
