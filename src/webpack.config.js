@@ -7,8 +7,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
     entry: [
-        './app/app.js',
-        './assets/style/app.scss'
+        './app/app.js'
     ],
 
     output: {
@@ -23,6 +22,7 @@ module.exports = {
             'Common': path.resolve(__dirname, 'views/common'),
             'Sections': path.resolve(__dirname, 'views/sections'),
             'Pages': path.resolve(__dirname, 'views/pages'),
+            'Modals': path.resolve(__dirname, 'views/modals')
         }
     },
     module: {
@@ -40,7 +40,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: [ 'es2015' ]
+                        presets: ['es2015', 'stage-3' ]
                     }
                 }
             },
