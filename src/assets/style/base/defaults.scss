@@ -27,3 +27,8 @@ footer,header,hgroup,menu,nav,section {
 * {
     box-sizing: border-box;
 }
+
+// clearing browser native focus styling
+:focus {
+    outline: 0;
+}

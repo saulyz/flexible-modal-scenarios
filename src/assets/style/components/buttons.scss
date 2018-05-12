@@ -1,0 +1,273 @@
+@mixin button-focus ($color) {
+    box-shadow: 0 0 3px 2px rgba($color, .3);
+}
+
+.btn,
+a.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    background: #c7cbd3;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #c7cbd3;
+    user-select: none;
+    cursor: pointer;
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
+    &:hover {
+        color: white;
+        text-decoration: none;
+    }
+    &:focus {
+        @include button-focus(#aaa);
+    }
+
+
+    &.btn-small {
+        height: 32px;
+        padding: 0 20px;
+        font-size: 12px;
+        border-radius: 16px;
+    }
+
+    &.btn-medium {
+        height: 42px;
+        padding: 0 25px;
+        font-size: 13px;
+        border-radius: 21px;
+    }
+
+    &.btn-big {
+        height: 46px;
+        padding: 0 30px;
+        font-size: 15px;
+        border-radius: 23px;
+    }
+
+    &.btn-huge {
+        height: 50px;
+        padding: 0 30px;
+        font-size: 18px;
+        border-radius: 25px;
+    }
+
+    &.btn-full-width {
+        width: 100%;
+    }
+
+    &.btn-round {
+        // has huge button sizing
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        border-radius: 25px;
+    }
+
+    &.btn-round.btn-small {
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 16px;
+    }
+
+    &.btn-round.btn-medium {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 21px;
+    }
+
+    &.btn-red {
+        //corresponds to $color-primary-red
+        background: #ed1a3b;
+        border-color: #ed1a3b;
+
+        .icon {
+            color: white !important;    // prevent context overides
+        }
+    }
+
+    &.btn-red:hover {
+        color: white;
+        background: #ff1c40;
+        border-color: #ff1c40;
+    }
+    &.btn-red:focus {
+        @include button-focus(#ff1c40);
+    }
+
+    &.btn-red:active {
+        color: white;
+        background: #d7002b;
+        border-color: #d7002b;
+    }
+
+    &.btn-red[disabled],
+    &.btn-red[disabled]:hover,
+    &.btn-red[disabled]:focus,
+    &.btn-red[disabled]:active {
+        background: #e0e4e7;
+        border-color: #e0e4e7;
+        box-shadow: none;
+
+        // ! remember set tabindex="-1" in HTML
+    }
+
+    &.btn-blue {
+        //corresponds to $color-primary-blue
+        background: #093888;
+        border-color: #093888;
+
+        .icon {
+            color: white !important;    // prevent context overides
+        }
+    }
+
+    &.btn-blue:hover {
+        color: white;
+        background: #0f54b1;
+        border-color: #0f54b1;
+    }
+
+    &.btn-blue:focus {
+        @include button-focus(#0f54b1);
+    }
+
+    &.btn-blue:active {
+        color: white;
+        background: #0a2d68;
+        border-color: #0a2d68;
+    }
+
+    &.btn-blue[disabled],
+    &.btn-blue[disabled]:hover,
+    &.btn-blue[disabled]:focus,
+    &.btn-blue[disabled]:active {
+        background: #e0e4e7;
+        border-color: #e0e4e7;
+        box-shadow: none;
+
+        // ! remember set tabindex="-1" in HTML
+    }
+
+    &.btn-white {
+        background: white;
+        color: $color-text;
+        border-color: white;
+    }
+
+    &.btn-outline {
+        border-color: #c6cad2;
+        color: #616d81;
+        background: transparent;
+    }
+
+    &.btn-outline:hover {
+        border-color: #8e97a6;
+    }
+
+    &.btn-outline:focus {
+        color: white;
+        background: #616d81;
+        border-color: #616d81;
+        box-shadow: none;
+
+        .icon {
+            color: white;
+        }
+    }
+
+    &.btn-outline:active {
+        background: transparent;
+        border-color: #616d81;
+        color: #1d2e4b;
+    }
+
+    &.btn-outline.active {
+        color: white;
+        background: #616d81;
+        border-color: #616d81;
+
+        .icon {
+            color: white;
+        }
+    }
+
+    &.btn-outline[disabled],
+    &.btn-outline[disabled]:hover,
+    &.btn-outline[disabled]:focus,
+    &.btn-outline[disabled]:active {
+        border-color: #e0e4e7;
+        color: #e0e4e7;
+        box-shadow: none;
+
+        // ! remember set tabindex="-1" in HTML
+    }
+
+    &.btn-nav-arrows {
+        padding: 8px 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        pointer-events: all;
+
+        .icon {
+            color: $color-text;
+        }
+
+        &:hover .icon {
+            color: $color-primary-blue;
+        }
+    }
+
+    &.btn-social {
+        width: 32px;
+        height: 32px;
+        background: #8e96a5;
+        border: 0;
+        border-radius: 50%;
+
+        &:hover {
+            background: $color-headers;
+        }
+    }
+
+    // Button helpers
+
+    .btn-caption {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+    }
+
+    &.btn-transparent {
+        padding: 0;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        background: inherit;
+        color: inherit;
+        border: 0;
+
+        &:focus {
+            @include button-focus(white)
+        }
+    }
+
+    &.btn-width-100-mobile {
+        @include extra-small-devices {
+            width: 100%;
+        }
+    }
+}
