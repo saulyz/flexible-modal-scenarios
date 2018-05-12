@@ -1,0 +1,133 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline: 0;
+}
+
+.modal-wrapper {
+    @extend .overlay;
+
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    @include medium-devices {
+        align-items: center;
+    }
+
+    &.modal-left-on-wide {
+        @include medium-devices {
+            justify-content: flex-start;
+        }
+    }
+
+    &.modal-right-on-wide {
+        @include medium-devices {
+            justify-content: flex-end;
+        }
+    }
+
+    &.modal-full-height {
+        @include medium-devices {
+            align-items: stretch;
+        }
+
+        .modal,
+        .modal-content {
+            @include medium-devices {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.modal {
+    z-index: 110;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+    @include block-shadow-equal;
+
+    @include until($breakpoint-xs) {
+        width: 100%;
+        height: 100%;
+    }
+
+    @include medium-devices {
+        align-items: center;
+        width: auto;
+    }
+
+    .icon-close {
+        background: transparent;
+        border: 0;
+        text-decoration: none;
+        @include unselectable();
+
+        :hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    .modal-content {
+        position: relative;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+
+        overflow-y: auto;
+        background-color: white;
+
+        @include medium-devices {
+            padding: 40px;
+            max-width: 640px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .modal-header-title {
+            position: relative;
+            width: calc(100% - 40px);
+            font-size: 18px;
+            line-height: 22px;
+
+            @include until($breakpoint-xs) {
+                margin-top: 30px;
+            }
+            @include medium-devices {
+                font-size: 22px;
+                line-height: 28px;
+                margin-top: 10px;
+            }
+            @include large-devices {
+                top: -5px;
+            }
+        }
+
+        .modal-body {
+
+            @include medium-devices {
+                overflow-y: visible;
+                // this makes modal scrollable when modal is higher than screen
+            }
+        }
+
+        iframe {
+            // in case of embeds: youtube, etc.
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+}   // end of .modal

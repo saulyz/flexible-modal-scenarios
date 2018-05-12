@@ -1,0 +1,48 @@
+@mixin unselectable() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin block-shadow-equal ($size: 20px, $opacity: 0.2) {
+    $shadow-size: 20px;    // initial
+    @if $size {
+        $shadow-size: $size;
+    }
+    box-shadow: 0 0 $shadow-size 0 rgba($color-text, $opacity);
+}
+
+// Responsive
+
+// Mixins for screen media queries
+@mixin until($breakpoint) {
+    @media screen and (max-width: $breakpoint - 1px) {
+        @content
+    }
+}
+
+@mixin extra-small-devices {
+    @media screen and (max-width: $breakpoint-xs - 1px) {
+        @content
+    }
+}
+
+@mixin small-devices {
+    @media screen and (min-width: $breakpoint-xs) and (max-width: $breakpoint-sm - 1px) {
+        @content
+    }
+}
+
+@mixin medium-devices {
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
+        @content
+    }
+}
+
+@mixin large-devices {
+    @media screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md - 1px) {
+        @content
+    }
+}
