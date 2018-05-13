@@ -28,6 +28,11 @@ footer,header,hgroup,menu,nav,section {
     box-sizing: border-box;
 }
 
+pre {
+	font-family: monospace;
+	font-weight: bold;
+}
+
 // clearing browser native focus styling
 :focus {
     outline: 0;
