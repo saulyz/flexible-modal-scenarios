@@ -12,3 +12,8 @@
 .layout-block {
     padding: 30px;
 }
+
+// used on body element when overlay interactive components are active
+.scroll-freeze {
+    overflow: hidden;
+}

@@ -1,6 +1,6 @@
 <script type="x-template" id="modal-template">
     <transition :name="modal.transition" v-if="isOpen">
-        <div class="modal-wrapper" :class="[ modal.customClass ]">
+        <div class="modal-wrapper" :class="[ modal.customClass ]" v-freeze-body>
             <div class="modal-overlay" @click="close(false)"></div>
             <div class="modal">
                 {% include "FrontendBase::common/modal/partials/modal-content-partial.html.twig" %}
