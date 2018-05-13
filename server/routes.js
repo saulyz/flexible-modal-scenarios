@@ -1,7 +1,7 @@
 module.exports = (app) => {
     
     const globals = {
-        myData: 'first data passed', // this mocks backend data
+        myData: 'data received from backend controller', // this mocks backend data
         menu: [
             { title: 'Home', url: '/' }
         ]
