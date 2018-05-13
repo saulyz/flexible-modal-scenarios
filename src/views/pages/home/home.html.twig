@@ -9,8 +9,12 @@
 {% block main %}
     <div class="main">
         <div class="content page-home" id="page-home">
-            <p>{{ myData }}</p>
-            <p><span class="link" @click="openModal">click for modal</span></p>
+            <p class="mb-30">{{ myData }}</p>
+            <p>
+                <span class="link" @click="openModalPlainText">click for modal plain-text</span>
+            <p>
+                <span class="link" @click="openModalApiLuck">click for api-luck</span>
+            </p>
         </div>
     </div>
 {% endblock %}
