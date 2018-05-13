@@ -18,6 +18,7 @@ app.set('twig options', {
 });
 
 require('./routes')(app);
+require('./api-endpoints')(app);
 
 reload(app);
 
