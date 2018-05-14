@@ -1,10 +1,10 @@
 import apiService from './api-service';
 
-class ActionService {
+class DataService {
     
     testLuck() {
         return apiService.get('luck')
     }
 }
 
-export default new ActionService();
+export default new DataService();

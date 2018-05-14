@@ -1,4 +1,4 @@
-import actionService from 'App/services/action-service';
+import dataService from 'App/services/data-service';
 
 import { faThumbsUp } from '@fortawesome/fontawesome-free-regular';
 import { faThumbsDown } from '@fortawesome/fontawesome-free-regular';
