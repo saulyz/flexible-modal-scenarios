@@ -36,7 +36,7 @@ export default {
     },
 
     created() {
-        actionService.testLuck()
+        dataService.testLuck()
             .then(response => response.data)
             .then(response => {
                 this.response = response

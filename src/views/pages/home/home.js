@@ -2,7 +2,8 @@ import Vue from 'vue';
 
 import modalService from 'App/components/modal-service';
 import plainTextModal from 'Modals/plain-text/plain-text';
-import apiLuckModal from 'Modals/api-luck/api-luck';
+
+import modalHelperService from 'App/services/modal-helper-service';
 
 new Vue({
     el: '#page-home',
@@ -16,11 +17,11 @@ new Vue({
                 .open();
         },
 
-        openModalApiLuck() {
-            return modalService.create()
-                .setTitle('Test your luck API')
-                .setComponent(apiLuckModal)
-                .open();
+        openModalApiLuck(title) {
+            modalHelperService.openLuckApi(title);
+                // .setTitle('Test your luck API')
+                // .setComponent(apiLuckModal)
+                // .open();
         }
     }
 });
