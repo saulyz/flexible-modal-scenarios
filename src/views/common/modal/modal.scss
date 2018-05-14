@@ -44,6 +44,24 @@
             }
         }
     }
+
+    &.modal-small-on-wide .modal-content {
+        @include from($breakpoint-xs) {
+            width: 400px;
+        }
+    }
+
+    &.modal-medium-on-wide .modal-content {
+        @include from($breakpoint-xs) {
+            width: 550px;
+        }
+    }
+
+    &.modal-large-on-wide .modal-content {
+        @include from($breakpoint-xs) {
+            width: 800px;
+        }
+    }
 }
 
 .modal-overlay {
@@ -140,7 +158,6 @@
             @include from($breakpoint-xs) {
                 font-size: 22px;
                 line-height: 28px;
-                margin-top: 10px;
             }
         }
 
