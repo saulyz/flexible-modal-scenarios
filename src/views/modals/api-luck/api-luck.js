@@ -36,7 +36,7 @@ export default {
     },
 
     created() {
-        dataService.testLuck()
+        dataService.testLuckRaw()
             .then(response => response.data)
             .then(response => {
                 this.response = response
