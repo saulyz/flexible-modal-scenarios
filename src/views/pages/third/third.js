@@ -10,10 +10,6 @@ new Vue({
     el: '#page-third',
     name: 'page-third',
 
-    created() {
-        console.log('third created')
-    },
-
     methods: {
         // primitive modal call
         openModalPlainText() {
