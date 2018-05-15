@@ -1,3 +1,7 @@
 .vue-map-container {
     min-height: 300px;
+
+    @include extra-small-devices {
+        min-height: calc(100vh - 140px);
+    }
 }

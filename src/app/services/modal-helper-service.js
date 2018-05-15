@@ -56,7 +56,7 @@ class ModalHelperService {
         return modalService.create()
             .setTitle('Kaunas, Lithuania')
             .setComponent(map)
-            .setCustomClass('modal-large-on-wide')
+            .setCustomClass('modal-medium-on-wide')
             .open();
     }
 }
