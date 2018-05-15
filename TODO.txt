@@ -1,0 +1,28 @@
++ modal visual styling
++ buttons for modal component parts
++ directives
++ nupiešti schemą visual - visos komponentės
++ API service
++ API endpoints
++ modal helper service
++ modal scenarios service
+- handle API response modals
+- stepper process
+- modal bare visual styling
+
+PUSLAPIAI
++ 1) demo, kad viduje bet koks view komponentas
+(raw modal operacijos)
+
+2) demo, kad gali būti keli pavaizdavimo template - naudojamas map
+(helper servisas)
+
+3) demo, kad gali būti scenarijai
+(scenarijų servisas)
+
+4) demo, kad gali būti operacijos su sąrašu ir iš API ateina success/failure rezultatas
+
+5) demo su stepper komponentu
+
+
+- readme file. Kaip pasileisti projektą, koks tikslas.
