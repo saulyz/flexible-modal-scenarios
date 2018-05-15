@@ -1,0 +1,33 @@
+{% extends 'FrontendBase::index.html.twig' %}
+
+{% block theme_class 'simpleapp' %}
+
+{% block header %}    
+    {% include 'FrontendBase::sections/header/header.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="content page-forth" id="page-forth">
+            <div class="mb-30">
+                <p class="intro">Modal can serve as an UX helper conveying information about transaction threat and result.</p>
+            </div>
+            <p class="mb-15">
+                List component with confirmed remove functions. 
+            </p>
+
+            <list class="mb-30"></list>
+
+            <p @click="doApiWithResponse">
+                click for demo action on API with success/failure responses
+            </p>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <p><strong>Demo footer</strong></p>
+    </div>
+{% endblock %}

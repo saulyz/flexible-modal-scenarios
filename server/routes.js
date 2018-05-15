@@ -5,7 +5,8 @@ module.exports = (app) => {
         menu: [
             { title: 'First', url: './' },
             { title: 'Second', url: './second' },
-            { title: 'Third', url: './third' }
+            { title: 'Third', url: './third' },
+            { title: 'Forth', url: './forth' },
         ],
         modalTemplatePartial: 'default'
     };
@@ -22,5 +23,9 @@ module.exports = (app) => {
 
     app.get('/third', (req, res) => {
         res.render('pages/third/third', globals);
+    });
+
+    app.get('/forth', (req, res) => {
+        res.render('pages/forth/forth', globals);
     });
 }
