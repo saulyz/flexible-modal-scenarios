@@ -1,0 +1,31 @@
+.request-feedback-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 30px;
+
+        &.resolved {
+            color: lightgreen;
+        }
+
+        &.rejected {
+            color: lightcoral;
+        }
+    }
+}

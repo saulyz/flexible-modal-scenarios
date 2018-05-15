@@ -9,6 +9,10 @@ import sharePrint from 'Modals/share/print';
 import shareEmail from 'Modals/share/email';
 import shareSocial from 'Modals/share/social';
 import map from 'Modals/map/map';
+import confirmPrompt from 'Modals/confirm/confirm';
+import requestResolved from 'Modals/general/request-resolved';
+import requestRejected from 'Modals/general/request-rejected';
+import generalInfo from 'Modals/general/info';
 
 class ModalHelperService {
 
@@ -57,6 +61,67 @@ class ModalHelperService {
             .setTitle('Kaunas, Lithuania')
             .setComponent(map)
             .setCustomClass('modal-medium-on-wide')
+            .open();
+    }
+
+    confirm() {
+        return modalService.create()
+            .setCustomClass('modal-small-on-wide')
+            .setTransition('fade-zoom')
+            .setComponent(confirmPrompt)
+            .open()
+            .then((answer) => {
+                if (answer) {
+                    return true;
+                }
+
+                throw false;
+            });
+    }
+
+    // API response success/failure handlers
+
+    generalResponse(response) {
+        if (response.status === 200) {
+            this.openGeneralRequestResolvedModal(response.title, response.message);
+
+            return response;
+        }
+
+        this.openGeneralRequestRejectedModal(response.title, response.message);
+
+        throw response;
+    }
+
+    openGeneralRequestResolvedModal(title, msg) {
+        return modalService.create()
+            .setCustomClass('modal-small-on-wide')
+            .setComponent(requestResolved)
+            .setParameters({
+                title: title,
+                message: msg
+            })
+            .open();
+    }
+
+    openGeneralRequestRejectedModal(title, msg) {
+        return modalService.create()
+            .setCustomClass('modal-small-on-wide')
+            .setComponent(requestRejected)
+            .setParameters({
+                title: title,
+                message: msg
+            })
+            .open();
+    }
+
+    openGeneralInfoModal(content) {
+        return modalService.create()
+            .setCustomClass('modal-small-on-wide')
+            .setComponent(generalInfo)
+            .setParameters({
+                content: content
+            })
             .open();
     }
 }
