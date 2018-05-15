@@ -1,0 +1,10 @@
+<div class="modal-content bare">
+    <div class="modal-header" @click="close(false)">
+        <button class="modal-close">
+            <font-awesome-icon class="icon-close" icon="times"></font-awesome-icon>
+        </button>
+    </div>
+    <div class="modal-body">
+        <component :is="modal.component" :on-close="close" v-bind="modal.parameters"></component>
+    </div>
+</div>

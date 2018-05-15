@@ -3,7 +3,7 @@
         <div class="modal-wrapper" :class="[ modal.customClass ]" v-freeze-body>
             <div class="modal-overlay" @click="close(false)"></div>
             <div class="modal">
-                {% include "FrontendBase::common/modal/partials/modal-content-partial.html.twig" %}
+                {% include "FrontendBase::common/modal/partials/" ~ modalTemplatePartial ~ ".html.twig" %}
             </div>
         </div>
     </transition>

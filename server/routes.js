@@ -4,8 +4,10 @@ module.exports = (app) => {
         myData: 'data received from backend controller', // this mocks backend data
         menu: [
             { title: 'First', url: './' },
-            { title: 'Second', url: './second' }
-        ]
+            { title: 'Second', url: './second' },
+            { title: 'Third', url: './third' }
+        ],
+        modalTemplatePartial: 'default'
     };
 
     app.get('/', (req, res) => {
@@ -13,6 +15,12 @@ module.exports = (app) => {
     });
 
     app.get('/second', (req, res) => {
-        res.render('pages/second/second', globals);
+        let newGlobals = {};
+        Object.assign(newGlobals, globals, { modalTemplatePartial: 'bare' })
+        res.render('pages/second/second', newGlobals);
+    });
+
+    app.get('/third', (req, res) => {
+        res.render('pages/third/third', globals);
     });
 }
