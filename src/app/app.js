@@ -10,4 +10,5 @@ import './bootstrap/components-directives';
 import 'Sections/overlay';
 
 // Pages
-import 'Pages/home/home';
+import 'Pages/first/first';
+import 'Pages/second/second';

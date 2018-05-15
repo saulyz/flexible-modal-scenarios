@@ -1,0 +1,40 @@
+{% extends 'FrontendBase::index.html.twig' %}
+
+{% block theme_class 'simpleapp' %}
+
+{% block header %}    
+    {% include 'FrontendBase::sections/header/header.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="content page-first" id="page-first">
+            <div class="mb-30">
+                <p class="intro">Demonstration that modal can contain any component of the view.</p>
+            </div>
+
+            <div @click="openInModalText1">
+                <text-1 class="mb-20 link"></text-1>
+            </div>
+            <div @click="openInModalText2">
+                <text-2 class="mb-20 link"></text-2>
+            </div>
+            <div @click="openInModalText3">
+                <text-3 class="mb-20 link"></text-3>
+            </div>
+            <div @click="openInModalText4">
+                <text-4 class="mb-20 link"></text-4>
+            </div>
+            <div @click="openInModalText5">
+                <text-5 class="mb-20 link"></text-5>
+            </div>
+            
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <p><strong>Demo footer</strong></p>
+    </div>
+{% endblock %}
