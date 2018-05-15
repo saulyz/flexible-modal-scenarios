@@ -24,6 +24,10 @@ new Vue({
             modalHelperService.openLuckApi(title);
         },
 
+        openModalMap() {
+            modalHelperService.openMap();
+        },
+
         // modal scenarios service for cycles
         openModalShare(title) {
             modalScenariosService.startShareInitialScenario(title);

@@ -8,6 +8,7 @@ import share from 'Modals/share/share';
 import sharePrint from 'Modals/share/print';
 import shareEmail from 'Modals/share/email';
 import shareSocial from 'Modals/share/social';
+import map from 'Modals/map/map';
 
 class ModalHelperService {
 
@@ -48,6 +49,14 @@ class ModalHelperService {
             .setTitle('Social networks')
             .setComponent(shareSocial)
             .setCustomClass('modal-medium-on-wide')
+            .open();
+    }
+
+    openMap() {
+        return modalService.create()
+            .setTitle('Kaunas, Lithuania')
+            .setComponent(map)
+            .setCustomClass('modal-large-on-wide')
             .open();
     }
 }

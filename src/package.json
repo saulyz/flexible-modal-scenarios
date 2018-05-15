@@ -12,7 +12,8 @@
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/vue-fontawesome": "0.0.22",
     "axios": "^0.16.2",
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue2-google-maps": "^0.9.7"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
