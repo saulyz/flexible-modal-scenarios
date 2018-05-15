@@ -12,3 +12,4 @@ import 'Sections/overlay';
 // Pages
 import 'Pages/first/first';
 import 'Pages/second/second';
+import 'Pages/third/third';

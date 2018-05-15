@@ -7,7 +7,7 @@ export default {
     name: 'api-luck',
     template: `
         <div>
-            <p class="mb-30">This is luck checker API test. On component create ir requests API and shows the API response.</p>
+            <p class="mb-30">This is luck checker API test. It requests API on component create and shows full API response.</p>
             <div class="api-response-wrapper">
                 <div v-if="response" class="response-icon-wrapper">    
                     <div class="response-icon-box"

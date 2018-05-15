@@ -1,0 +1,35 @@
+{% extends 'FrontendBase::index.html.twig' %}
+
+{% block theme_class 'simpleapp' %}
+
+{% block header %}    
+    {% include 'FrontendBase::sections/header/header.html.twig' %}
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="content page-third" id="page-third">
+            <div class="mb-30">
+                <p class="intro">There can be helper services to ease-up modal creation and control.</p>
+            </div>
+            <p>
+                <span class="link" @click="openModalMap()">click for map</span>
+            </p>
+            <p>
+                <span class="link" @click="openModalPlainText">click for modal plain-text</span>
+            </p>
+            <p>
+                <span class="link" @click="openModalApiLuck('Test your luck API')">click for api-luck test</span>
+            </p>
+            <p>
+                <span class="link" @click="openModalShare('Share')">click for share sequences</span>
+            </p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="footer">
+        <p><strong>Demo footer</strong></p>
+    </div>
+{% endblock %}
