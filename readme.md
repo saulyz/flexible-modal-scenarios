@@ -10,6 +10,7 @@ For more information see the [slides](https://docs.google.com/presentation/d/1SU
 VueJS, Twig, no Vuex.
 
 ## Instalation
+Since this solution has google maps component, you will need your own GoogleMaps API key. When you have it, make a config.local.js of a src/app/config/config.js file and add the key. You will see instruction link for obtaining a key, if you don't have it yet.
 
 ```javascript
 # backend 
@@ -20,3 +21,6 @@ npm run serve
 cd src/
 npm install
 npm run start
+```
+
+ Both processes must run when launching an App.
