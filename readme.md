@@ -1,4 +1,6 @@
-# About the project
+# Flexible modal solutions
+
+## About the project
 
 This repository contains App prototype which illustrates flexible modal solution. The solution employs a flexible pattern that most of modal features are implemented on data layer, leaving only mandatory parts in the view layer. 
 
@@ -7,7 +9,7 @@ For more information see the [slides](https://docs.google.com/presentation/d/1SU
 
 VueJS, Twig, no Vuex.
 
-# Instalation
+## Instalation
 
 ```javascript
 # backend 
