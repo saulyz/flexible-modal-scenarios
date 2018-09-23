@@ -8,7 +8,7 @@ export default {
         <div>
             <div v-for="(item, index) in list">
                 <span v-text="item.title"></span>
-                <font-awesome-icon class="ml-10 icon-trash" icon="trash" @click="onRemove(index)"></font-awesome-icon>
+                <font-awesome-icon class="ml-10 icon-trash link" icon="trash" @click="onRemove(index)"></font-awesome-icon>
             </div>
             <div v-if="!list.length">The list is empty</div>
         </div>

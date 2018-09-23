@@ -3,6 +3,8 @@ body {
 }
 
 .link {
+    cursor: pointer;
+    
     &:hover {
         color: $color-headers;
     }

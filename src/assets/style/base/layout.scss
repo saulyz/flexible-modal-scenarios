@@ -3,6 +3,10 @@
     min-height: 100vh;
     padding: 60px;
     background-color: $color-bg1; 
+
+    @media only screen and (max-width: 485px) {
+        padding: 60px 30px;
+    }
 }
 
 .footer {
