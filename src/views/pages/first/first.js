@@ -6,6 +6,7 @@ import text2 from 'Common/text/text-2';
 import text3 from 'Common/text/text-3';
 import text4 from 'Common/text/text-4';
 import text5 from 'Common/text/text-5';
+import text6 from 'Common/text/text-6';
 
 new Vue({
     el: '#page-first',
@@ -48,12 +49,18 @@ new Vue({
                 .open();
         },
 
+        openInModalText6() {
+            return modalService.create()
+                .setComponent(text6)
+                .open();
+        },
+
         openModalPlainText() {
             return modalService.create()
                 .setTitle('Plaintext dumb component')
                 .setComponent(plainTextModal)
                 .open();
         }
-
+        
     }
 });

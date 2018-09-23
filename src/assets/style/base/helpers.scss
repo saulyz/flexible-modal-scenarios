@@ -6,3 +6,20 @@
     display: flex;
     justify-content: space-evenly
 }
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.f-clear {
+    clear: both;
+}
+
+.w-200{
+    width: 200px;
+    max-width: 100%;
+}
