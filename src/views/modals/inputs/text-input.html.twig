@@ -1,0 +1,35 @@
+<script type="x-template" id="text-input-template">
+    <div>
+        <div class="cont-form flow-vertical">
+            <div class="cont-form__input-wrap">
+                <div class="field" :class="{'error': error}">
+                    <div class="control">
+                        <textarea class="input-textarea resize-none"
+                                  name="comment"
+                                  v-model="localContent"
+                                  placeholder="enter your value"
+                                  rows="4"
+                        ></textarea>
+                        <p class="help" :class="{'error': error}">
+                            <span v-show="error">Your input is too short</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-action-block border-none">
+            <div class="modal-action-block__btn">
+                <button class="btn btn-big btn-blue" :disabled="error" @click="submit" @key.enter="submit">
+                    Submit value
+                </button>
+            </div>
+
+            <div class="modal-action-block__text">
+            <span class="text-clickable icon-close" @click="onClose(false)">
+                Cancel
+            </span>
+            </div>
+        </div>
+    </div>
+</script>

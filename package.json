@@ -17,5 +17,7 @@
     "reload": "^2.0.0",
     "twig": "^1.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "body-parser": "^1.18.3"
+  }
 }

@@ -12,6 +12,7 @@ import text4 from 'Common/text/text-4';
 import text5 from 'Common/text/text-5';
 import text6 from 'Common/text/text-6';
 import list from 'Common/list/list';
+import hiddenInput from 'Common/hidden-input/hidden-input';
 
 // Directives
 import freezeBody from 'Directives/freeze-body';
@@ -25,5 +26,6 @@ Vue.component('text-4', text4);
 Vue.component('text-5', text5);
 Vue.component('text-6', text6);
 Vue.component('list', list);
+Vue.component('hidden-input', hiddenInput);
 
 Vue.directive('freeze-body', freezeBody);

@@ -1,0 +1,11 @@
+<script type="x-template" id="hidden-input-template">
+    <div class="hidden-input">
+        <slot>
+            <span v-text="content"></span>
+        </slot>
+        <input type="hidden" :name="name" :value="content">
+        <button class="btn btn-transparent" @click.prevent="openEditModal()">
+            <font-awesome-icon class="icon-edit" icon="edit"></font-awesome-icon>
+        </button>
+    </div>
+</script>

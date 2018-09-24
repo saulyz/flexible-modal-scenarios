@@ -7,9 +7,15 @@ module.exports = (app) => {
             { title: 'Second', url: './second' },
             { title: 'Third', url: './third' },
             { title: 'Forth', url: './forth' },
+            { title: 'Fifth', url: './fifth' },
         ],
         modalTemplatePartial: 'default'
     };
+
+    const bodyParser = require('body-parser');
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
 
     app.get('/', (req, res) => {
         res.render('pages/first/first', globals);
@@ -28,4 +34,17 @@ module.exports = (app) => {
     app.get('/forth', (req, res) => {
         res.render('pages/forth/forth', globals);
     });
+
+    app.get('/fifth', (req, res) => {
+        res.render('pages/fifth/fifth', globals);
+    });
+
+    app.post('/post-endpoint', (req, res) => {
+
+        let variables = req.body;
+        res.send({
+            status: 200,
+            message: 'Response from POST endpoint. Dumping variables', variables
+        });
+    })
 }

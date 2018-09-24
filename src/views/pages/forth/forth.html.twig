@@ -10,17 +10,26 @@
     <div class="main">
         <div class="content page-forth" id="page-forth">
             <div class="mb-30">
-                <p class="intro">Modal can serve as an UX helper conveying information about transaction threat and result.</p>
+                <p class="intro">Modal as an UX helper to convey information about transaction threat and result.</p>
             </div>
-            <p class="mb-15">
-                List component with confirmed remove functions. 
-            </p>
 
-            <list class="mb-30"></list>
+            <div class="mb-30">
+                <p><strong>Feedback from backend API.</strong></p>
+                <p class="mb-15">The component calls API and depending upon result different modal is called.</p>
+                <p class="link" @click="doApiWithResponse">
+                    random success API
+                </p>
+            </div>
 
-            <p class="link" @click="doApiWithResponse">
-                click for demo action on API with success/failure responses
-            </p>
+            <div>
+                <p><strong>List component with confirm functions.</strong></p>
+                <p class="mb-15">The component calls modal for confirmation and result is returned through a modal handler.</p>
+            
+                <list></list>
+            </div>
+
+            
+            
 
         </div>
     </div>

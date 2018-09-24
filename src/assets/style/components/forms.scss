@@ -1,0 +1,56 @@
+.field {
+
+    .help {
+        font-size: 13px;
+        line-height: 13px;
+        margin-top: 9px;
+        height: 20px;
+        color: $color-text;
+
+        &.error {
+            color: $color-primary-red;
+        }
+
+        &.success {
+            color: $color-success;
+        }
+    }
+
+    &.error {
+
+        .label {
+            color: $color-primary-red;
+        }
+
+        .input,
+        .input-textarea {
+            border-color: $color-primary-red;
+        }
+    }
+
+    &.success {
+
+        .label {
+            color: $color-success;
+        }
+
+        .input {
+            border-color: $color-success;
+        }
+    }
+
+    &.disabled {
+        .label {
+            color: $color-disabled;
+        }
+
+        .input {
+            // .input should also have disabled attr
+            border-color: $color-disabled;
+        }
+        .input::placeholder {
+            color: $color-disabled;
+        }
+
+    }
+}
