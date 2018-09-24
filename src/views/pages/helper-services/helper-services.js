@@ -7,8 +7,8 @@ import modalHelperService from 'App/services/modal-helper-service';
 import modalScenariosService from 'App/services/modal-scenarios-service';
 
 new Vue({
-    el: '#page-third',
-    name: 'page-third',
+    el: '#page-helper-services',
+    name: 'page-helper-services',
 
     methods: {
         // primitive modal call

@@ -1,0 +1,10 @@
+pre {
+    padding: 20px;
+    font-weight: normal;
+    color: $color-primary-blue;
+    background: white;
+    
+    &.has-border {
+        border: 1px solid $clr-muted;
+    }
+}

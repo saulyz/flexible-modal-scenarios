@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import eventBus from 'App/components/event-bus';
 
 import modalService from 'App/components/modal-service';
 import text1 from 'Common/text/text-1';
@@ -9,8 +10,8 @@ import text5 from 'Common/text/text-5';
 import text6 from 'Common/text/text-6';
 
 new Vue({
-    el: '#page-first',
-    name: 'page-first',
+    el: '#page-local-functions',
+    name: 'page-local-functions',
 
     methods: {
         // primitive modal call
@@ -53,14 +54,6 @@ new Vue({
             return modalService.create()
                 .setComponent(text6)
                 .open();
-        },
-
-        openModalPlainText() {
-            return modalService.create()
-                .setTitle('Plaintext dumb component')
-                .setComponent(plainTextModal)
-                .open();
         }
-        
     }
 });

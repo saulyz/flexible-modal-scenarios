@@ -17,7 +17,9 @@
 
             <div class="header layout-block" id="header">
                 {% block header %}
-                {% block menu %}{% endblock %}
+                    {% include 'FrontendBase::sections/header/header.html.twig' %}
+                    
+                    {% block menu %}{% endblock %}
                 {% endblock %}
             </div>
             
@@ -31,7 +33,9 @@
             </div>
             
             <div class="footer layout-block f-clear" id="footer">
-                {% block footer %}{% endblock %}
+                {% block footer %}
+                    {% include 'FrontendBase::sections/footer/footer.html.twig' %}
+                {% endblock %}
             </div>
             
         </div>

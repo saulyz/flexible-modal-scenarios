@@ -10,8 +10,9 @@ import './bootstrap/components-directives';
 import 'Sections/overlay';
 
 // Pages
-import 'Pages/first/first';
-import 'Pages/second/second';
-import 'Pages/third/third';
-import 'Pages/forth/forth';
-import 'Pages/fifth/fifth';
+import 'Pages/local-functions/local-functions';
+import 'Pages/visual-templates/visual-templates';
+import 'Pages/helper-services/helper-services';
+import 'Pages/ux-task/ux-task';
+import 'Pages/pass-value/pass-value';
+import 'Pages/event-based/event-based';

@@ -2,13 +2,9 @@
 
 {% block theme_class 'simpleapp' %}
 
-{% block header %}    
-    {% include 'FrontendBase::sections/header/header.html.twig' %}
-{% endblock %}
-
 {% block main %}
     <div class="main">
-        <div class="content page-second" id="page-second">
+        <div class="content page-visual-templates" id="page-visual-templates">
             <div class="mb-30">
                 <p class="intro">Modal can have several visual forms (templates of html+css).</p>
             </div>
@@ -16,11 +12,5 @@
                 <span class="link" @click="openModalMap()">click for map (bare template)</span>
             </p>
         </div>
-    </div>
-{% endblock %}
-
-{% block footer %}
-    <div class="footer">
-        <p><strong>Demo footer</strong></p>
     </div>
 {% endblock %}

@@ -26,7 +26,7 @@ Vue.component('text-3', text3);
 Vue.component('text-4', text4);
 Vue.component('text-5', text5);
 Vue.component('text-6', text6);
-Vue.component('image', image);
+Vue.component('image-simple', image);
 Vue.component('list', list);
 Vue.component('hidden-input', hiddenInput);
 

@@ -3,8 +3,8 @@ import Vue from 'vue';
 import modalHelperService from 'App/services/modal-helper-service';
 
 new Vue({
-    el: '#page-second',
-    name: 'page-second',
+    el: '#page-visual-templates',
+    name: 'page-visual-templates',
 
     methods: {
         openModalMap() {

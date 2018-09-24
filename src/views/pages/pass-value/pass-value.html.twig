@@ -2,21 +2,19 @@
 
 {% block theme_class 'simpleapp' %}
 
-{% block header %}
-{% include 'FrontendBase::sections/header/header.html.twig' %}
-{% endblock %}
-
 {% block main %}
 <div class="main">
-    <div class="content page-fifth" id="page-fifth">
+    <div class="content page-pass-value" id="page-pass-value">
         <div class="mb-30">
             <p class="intro">Through a modal handler values can be passed to the main page components, for example - forms.</p>
         </div>
 
         <form action="/post-endpoint" method="POST" ref="form" @submit.prevent="onSubmit">
             <div>
-                <p class="mb-15">Here is a basic form with post method. <strong>Hidden input</strong> component wrapps a hidden input field and uses modal for its' value edit.</p>
+                <p class="mb-20">Here is a basic form with post method. <strong>Hidden input</strong> component wrapps a hidden input field and uses modal for its' value edit.</p>
                 
+                <p class="mb-15">Please change value and hit submit</p>
+
                 <hidden-input class="mb-20"
                     name="form-variable-name" 
                     value="..." 
@@ -34,12 +32,11 @@
         
     </div>
 </div>
-{% include 'FrontendBase::common/hidden-input/hidden-input.html.twig' %}
-{% include 'FrontendBase::modals/inputs/text-input.html.twig' %}
 {% endblock %}
 
-{% block footer %}
-<div class="footer">
-    <p><strong>Demo footer</strong></p>
-</div>
+{% block templates %}
+    {{ parent() }}
+
+    {% include 'FrontendBase::common/hidden-input/hidden-input.html.twig' %}
+    {% include 'FrontendBase::modals/inputs/text-input.html.twig' %}
 {% endblock %}

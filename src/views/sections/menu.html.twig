@@ -3,7 +3,11 @@
     {% if menu %}
         <nav {% if classList is not empty %}class="{{ classList }}"{% endif %} >
         {% for menu_item in menu %}
-            <a href="{{ menu_item.url }}">{{ menu_item.title }}</a>
+            <a {% if currentPageId is not empty and currentPageId == loop.index %}class="active"{% endif %}
+                href="{{ menu_item.url }}"
+            >
+                {{ menu_item.title }}
+            </a>
         {% endfor %}
         </ul>
     {% endif %}

@@ -1,0 +1,34 @@
+{% extends 'FrontendBase::index.html.twig' %}
+
+{% block theme_class 'simpleapp' %}
+
+{% block main %}
+    <div class="main">
+        <div class="content page-event-based" id="page-event-based">
+            <div class="mb-30">
+                <p class="intro">Modal can be initiated from anywhere by emiting event (using eventBus).</p>
+            </div>
+
+            <div class="mb-20">
+                <p>Let's create simple modal object (and have some spare component to put inside).</p>
+            </div>
+
+<pre class="code">
+{
+    title: 'Voila! You see a modal opened via event',
+    component: image,
+    parameters: {
+        name: 'baby.jpg',
+        title: 'Voila!'
+    },
+    onClose: () => false
+}
+</pre>
+
+            <div class="mt-20">
+                <button class="btn btn-medium btn-blue" @click="openModalViaEvent">Emit event "modal.open"</button>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -3,13 +3,15 @@ module.exports = (app) => {
     const globals = {
         myData: 'data received from backend controller', // this mocks backend data
         menu: [
-            { title: 'First', url: './' },
-            { title: 'Second', url: './second' },
-            { title: 'Third', url: './third' },
-            { title: 'Forth', url: './forth' },
-            { title: 'Fifth', url: './fifth' },
+            { id: 1, title: 'First', url: './page01' },
+            { id: 2, title: 'Second', url: './page02' },
+            { id: 3, title: 'Third', url: './page03' },
+            { id: 4, title: 'Forth', url: './page04' },
+            { id: 5, title: 'Fifth', url: './page05' },
+            { id: 6, title: 'Sixth', url: './page06' }
         ],
-        modalTemplatePartial: 'default'
+        modalTemplatePartial: 'default',
+        currentPageId: null
     };
 
     const bodyParser = require('body-parser');
@@ -17,27 +19,42 @@ module.exports = (app) => {
         extended: true
     }));
 
+    let newGlobals = {};
+
     app.get('/', (req, res) => {
-        res.render('pages/first/first', globals);
+        Object.assign(newGlobals, globals, {currentPageId: 1});
+        res.render('pages/local-functions/local-functions', newGlobals);
     });
 
-    app.get('/second', (req, res) => {
-        let newGlobals = {};
-        Object.assign(newGlobals, globals, { modalTemplatePartial: 'bare' })
-        res.render('pages/second/second', newGlobals);
+    app.get('/page01', (req, res) => {
+        Object.assign(newGlobals, globals, { currentPageId: 1 });
+        res.render('pages/local-functions/local-functions', newGlobals);
     });
 
-    app.get('/third', (req, res) => {
-        res.render('pages/third/third', globals);
+    app.get('/page02', (req, res) => {
+        Object.assign(newGlobals, globals, { modalTemplatePartial: 'bare' }, { currentPageId: 2 });
+        res.render('pages/visual-templates/visual-templates', newGlobals);
     });
 
-    app.get('/forth', (req, res) => {
-        res.render('pages/forth/forth', globals);
+    app.get('/page03', (req, res) => {
+        Object.assign(newGlobals, globals, { currentPageId: 3 });
+        res.render('pages/event-based/event-based', newGlobals);
     });
 
-    app.get('/fifth', (req, res) => {
-        res.render('pages/fifth/fifth', globals);
+    app.get('/page04', (req, res) => {
+        Object.assign(newGlobals, globals, { currentPageId: 4 });
+        res.render('pages/helper-services/helper-services', newGlobals);
     });
+
+    app.get('/page05', (req, res) => {
+        Object.assign(newGlobals, globals, { currentPageId: 5 });
+        res.render('pages/ux-task/ux-task', newGlobals);
+    });
+
+    app.get('/page06', (req, res) => {
+        Object.assign(newGlobals, globals, { currentPageId: 6 });
+        res.render('pages/pass-value/pass-value', newGlobals);
+    });    
 
     app.post('/post-endpoint', (req, res) => {
 
