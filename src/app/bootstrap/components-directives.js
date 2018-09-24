@@ -11,6 +11,7 @@ import text3 from 'Common/text/text-3';
 import text4 from 'Common/text/text-4';
 import text5 from 'Common/text/text-5';
 import text6 from 'Common/text/text-6';
+import image from 'Common/image/image';
 import list from 'Common/list/list';
 import hiddenInput from 'Common/hidden-input/hidden-input';
 
@@ -25,6 +26,7 @@ Vue.component('text-3', text3);
 Vue.component('text-4', text4);
 Vue.component('text-5', text5);
 Vue.component('text-6', text6);
+Vue.component('image', image);
 Vue.component('list', list);
 Vue.component('hidden-input', hiddenInput);
 
