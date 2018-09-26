@@ -4,8 +4,8 @@ import eventBus from 'App/components/event-bus';
 import image from 'Common/image/image';
 
 new Vue({
-    el: '#event-based',
-    name: 'event-based-page',
+    el: '#page-event-based',
+    name: 'page-event-based',
 
     methods: {
         openModalViaEvent() {
