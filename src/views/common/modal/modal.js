@@ -18,6 +18,14 @@ export default {
         eventBus.$on('modal.close', (answer) => this.close(answer));
     },
 
+    mounted() {
+        document.body.addEventListener('keyup', e => {
+            if (e.keyCode === 27) {
+                this.close()
+            }
+        })
+    },
+
     methods: {
         open(modal) {
             this.modal = modal;
